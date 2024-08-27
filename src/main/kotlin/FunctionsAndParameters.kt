@@ -20,6 +20,7 @@ fun main() {
     searchFor("How to be a good programmer?")
     searchFor("How to be a good programmer?", "Bing")
     // we can also mention parameters explicitly and passs their values in function
+    // this concept is called as named parameters
     searchFor(srarchEngine = "Bing", search = "How to be a Kotlin programmer?")
 
     println(alternatingSum(453,22,63,*arr,88,11,101,223))
@@ -76,12 +77,12 @@ fun searchFor(search:String, srarchEngine:String = "Google") {
 fun alternatingSum(vararg numbers: Int) : Int {
     var sum = 0
 
-    for(i in numbers.indices) { // arr.indices returns the valid indices for the array (0 to size-1)
+    for(i in numbers.indices) {
+        // arr.indices returns the valid indices for the array (0 to size-1)
         if(i%2 == 0)
             sum+=numbers[i]
         else
             sum-=numbers[i]
     }
-
     return sum
 }
