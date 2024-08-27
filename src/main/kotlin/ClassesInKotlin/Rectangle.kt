@@ -2,7 +2,7 @@ package ClassesInKotlin
 
 class Rectangle(
     // this is the class constructor
-    val a:Double, val b: Double) {
+    val a:Double, val b: Double) : Shape("Rectangle") {
 
     init {
         /* the init block contains the logic to be executed when an

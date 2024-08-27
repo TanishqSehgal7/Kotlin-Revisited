@@ -1,6 +1,6 @@
 package ClassesInKotlin
 
-class Circle(val radius:Double) {
+class Circle(val radius:Double) : Shape("Circle") {
 
     val PI: Double = 3.15
 

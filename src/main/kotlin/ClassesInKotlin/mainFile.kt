@@ -11,6 +11,7 @@ fun main() {
     println("Perimeter of rectable is: ${rect.calculatePerimeter()}")
 
     val isSquare =  rect.isSquare()
+
     if (isSquare)
         println("This rectagle is actually a square")
     else
@@ -26,4 +27,19 @@ fun main() {
     println("Perimeter of Triangle is : ${triangle.perimeterOfTriangle()}")
 
     println("Area of Triangle is: ${triangle.areaOfTriangle()}")
+
+    val myCircle = Circle(5.0)
+    myCircle.changeName("NewCircle")
+    println("The name of the circle is: ${myCircle.name}")
+    /*
+        In the above example, since circle class inherits Shape class, whenever
+        the object of myCircle is created, first the init block of Shape class
+        is executed since on inheriting the Shape class its constructor is
+        called
+    */
+
+    val myTriangle = Triangle(2.0, 3.0, 5.0)
+    myTriangle.changeName("NewTriangle")
+    println("The name of the triangle is: ${myTriangle.name}")
+
 }

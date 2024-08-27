@@ -1,11 +1,14 @@
 package ClassesInKotlin
 
-class Triangle(val a:Double, val b:Double, val c:Double) {
+import kotlin.math.sqrt
 
-
-    val h = Math.abs(Math.sqrt(Math.pow(a,2.0) - Math.pow(b/2,2.0)))
-
-    fun areaOfTriangle() = 0.5 * b * h
+class Triangle(
+    val a:Double,
+    val b:Double,
+    val c:Double) : Shape("Triangle") {
 
     fun perimeterOfTriangle() = a + b + c
+
+    private val perimeter = perimeterOfTriangle()
+    fun areaOfTriangle() = sqrt(perimeter*(perimeter-a)*(perimeter-b)*(perimeter-c))
 }
