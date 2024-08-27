@@ -1,0 +1,29 @@
+import ClassesInKotlin.Circle
+import ClassesInKotlin.Rectangle
+import ClassesInKotlin.Triangle
+
+fun main() {
+
+    val rect : Rectangle = Rectangle(5.0,3.0)
+
+    println("Area of rectangle is: ${rect.calculateArea()}")
+
+    println("Perimeter of rectable is: ${rect.calculatePerimeter()}")
+
+    val isSquare =  rect.isSquare()
+    if (isSquare)
+        println("This rectagle is actually a square")
+    else
+        println("This rectangle is not a square")
+
+    val circle = Circle(5.0)
+
+    println("Area of the circle is: ${circle.calculateArea()}")
+    println("Circumference of the circle is: ${circle.calculateCircumference()}")
+
+    val triangle = Triangle(8.0, 6.0,4.0)
+
+    println("Perimeter of Triangle is : ${triangle.perimeterOfTriangle()}")
+
+    println("Area of Triangle is: ${triangle.areaOfTriangle()}")
+}
