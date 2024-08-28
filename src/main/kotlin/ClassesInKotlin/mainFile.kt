@@ -1,5 +1,6 @@
 import ClassesInKotlin.Circle
 import ClassesInKotlin.Rectangle
+import ClassesInKotlin.Shape
 import ClassesInKotlin.Triangle
 
 fun main() {
@@ -42,6 +43,11 @@ fun main() {
     myTriangle.changeName("NewTriangle")
     println("The name of the triangle is: ${myTriangle.name}")
 
+    val square = Rectangle(5,5)
+    square.isSquare()
+
+    println(maxArea(rect, myTriangle, myCircle))
+    println(maxArea(myTriangle, square))
 }
 
 /*
@@ -50,4 +56,27 @@ has 3 functions equals(other:Any?):Boolean, hashCode():Int and
 toString():String
 
 Similarly, the Shape class inherits from the class Any
-* */
+*/
+
+// function overloading - different number of parameters, different datatype of parameters
+
+fun maxArea(shape1:Shape, shape2:Shape) : Double {
+    val areaShape1 = shape1.areaOfShape()
+    val areaShape2 = shape2.areaOfShape()
+    return Math.max(areaShape1, areaShape2)
+}
+
+fun maxArea(shape1:Shape, shape2:Shape, shape3:Shape) : Double {
+    val areaShape1 = shape1.areaOfShape()
+    val areaShape2 = shape2.areaOfShape()
+    val areShape3 = shape3.areaOfShape()
+    return Math.max(areaShape1, Math.max(areaShape2,areShape3))
+}
+
+fun maxArea(shape1:Circle, shape2:Triangle, shape3:Rectangle) : Double {
+    val areaShape1 = shape1.areaOfShape()
+    val areaShape2 = shape2.areaOfShape()
+    val areShape3 = shape3.areaOfShape()
+    return Math.max(areaShape1, Math.max(areaShape2,areShape3))
+}
+

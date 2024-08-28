@@ -2,6 +2,8 @@ package ClassesInKotlin
 
 class Circle constructor(val radius:Double) : Shape("Circle") {
 
+    constructor(diameter : Int) : this((diameter/2).toDouble())
+
 //    the default visibility modifier in kotlin is public
 
     private val PI: Double = 3.15 // only accessible to Circle class since it is private
