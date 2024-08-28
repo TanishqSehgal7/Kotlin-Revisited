@@ -43,3 +43,11 @@ fun main() {
     println("The name of the triangle is: ${myTriangle.name}")
 
 }
+
+/*
+Every object in kotlin inherits from the type "Any" that the Any class
+has 3 functions equals(other:Any?):Boolean, hashCode():Int and
+toString():String
+
+Similarly, the Shape class inherits from the class Any
+* */

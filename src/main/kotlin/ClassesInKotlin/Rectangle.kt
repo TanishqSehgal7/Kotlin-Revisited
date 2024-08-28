@@ -16,5 +16,12 @@ class Rectangle(
     fun calculatePerimeter() = 2*a + 2*b
 
     fun isSquare() = a == b
+    override fun areaOfShape(): Double {
+        return a * b
+    }
+
+    override fun perimeterOfShape(): Double {
+        return 2*a + 2*b
+    }
 
 }

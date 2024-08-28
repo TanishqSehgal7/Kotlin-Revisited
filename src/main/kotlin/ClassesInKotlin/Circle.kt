@@ -12,6 +12,13 @@ class Circle constructor(val radius:Double) : Shape("Circle") {
     fun calculateArea() = PI * radius * radius
 
     fun calculateCircumference() = 2 * PI * radius
+    override fun areaOfShape(): Double {
+        return PI * radius * radius
+    }
+
+    override fun perimeterOfShape(): Double {
+        return PI * radius * radius
+    }
 
 }
 
