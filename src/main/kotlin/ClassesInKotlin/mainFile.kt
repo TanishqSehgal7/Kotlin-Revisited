@@ -1,7 +1,4 @@
-import ClassesInKotlin.Circle
-import ClassesInKotlin.Rectangle
-import ClassesInKotlin.Shape
-import ClassesInKotlin.Triangle
+import ClassesInKotlin.*
 
 fun main() {
 
@@ -48,6 +45,13 @@ fun main() {
 
     println(maxArea(rect, myTriangle, myCircle))
     println(maxArea(myTriangle, square))
+
+    println("Creating a random Circle")
+    val newRandmomCircle = CompanionObjectsUsage.randomCircle()
+
+    println("Creating a Random Reactangle")
+    val newRandomRectangle = Rectangle.generateRandomRectangle()
+
 }
 
 /*

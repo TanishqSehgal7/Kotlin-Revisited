@@ -1,5 +1,7 @@
 package ClassesInKotlin
 
+import kotlin.random.Random
+
 class Rectangle(
     // this is the primary constructor of the class
     val a:Double, val b: Double) : Shape("Rectangle") {
@@ -8,11 +10,22 @@ class Rectangle(
     constructor(a:Double) : this(a,a)
     constructor(a:Int, b:Int) : this(a.toDouble(), b.toDouble())
 
+    companion object {
+        fun generateRandomRectangle() : Rectangle {
+            val l = Random.nextDouble(5.0,10.0)
+            val b = Random.nextDouble(5.0,10.0)
+            return Rectangle(l,b)
+        }
+    }
+
     init {
         /* the init block contains the logic to be executed when an
             object of a particular class is created
+            We can have multiple init blocks, and they will be
+            executed in the order they appear
         */
         println("Rectangle created with a = $a and b = $b")
+        ImportantConstants.myFunc()
     }
 
     fun calculateArea() = a * b

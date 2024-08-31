@@ -6,20 +6,23 @@ class Circle constructor(val radius:Double) : Shape("Circle") {
 
 //    the default visibility modifier in kotlin is public
 
-    private val PI: Double = 3.15 // only accessible to Circle class since it is private
+//    private val PI: Double = 3.15 // only accessible to Circle class since it is private
     init {
         println("A circle is created with radius = $radius")
+        println("Area of the circle is: ${areaOfShape()}")
+        println("Perimeter of the circle is: ${perimeterOfShape()}")
+        ImportantConstants.myFunc()
     }
 
-    fun calculateArea() = PI * radius * radius
+    fun calculateArea() = ImportantConstants.PI * radius * radius
 
-    fun calculateCircumference() = 2 * PI * radius
+    fun calculateCircumference() = 2 * ImportantConstants.PI * radius
     override fun areaOfShape(): Double {
-        return PI * radius * radius
+        return ImportantConstants.PI * radius * radius
     }
 
     override fun perimeterOfShape(): Double {
-        return PI * radius * radius
+        return ImportantConstants.PI * radius * radius
     }
 
 }

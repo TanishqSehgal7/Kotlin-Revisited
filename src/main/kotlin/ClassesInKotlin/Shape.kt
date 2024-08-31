@@ -8,6 +8,7 @@ abstract class Shape(
 
     init {
         println("I am the super class!")
+        ImportantConstants.myFunc()
     }
 
 //    protected fun changeName(newName:String) {

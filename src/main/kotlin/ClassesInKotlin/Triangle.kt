@@ -7,6 +7,10 @@ class Triangle(
     val b:Double,
     val c:Double) : Shape("Triangle") {
 
+    init {
+        ImportantConstants.myFunc()
+    }
+
     fun perimeterOfTriangle() = a + b + c
 
     private val perimeter = perimeterOfTriangle()
