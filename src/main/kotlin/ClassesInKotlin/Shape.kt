@@ -3,6 +3,8 @@ package ClassesInKotlin
 abstract class Shape(
     var name:String) {
 
+    constructor(name:String, vararg dimensions:Double) : this(name)
+
     /* name is protected which means that name is accessible
     to class Shape and all the class which inherit from the Shape class */
 
