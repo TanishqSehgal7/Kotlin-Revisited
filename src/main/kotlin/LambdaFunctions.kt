@@ -79,6 +79,4 @@ fun MutableList<Shape>.customFilterForShapesWithMoreThanOneArguments(filterFunct
     }
     resultList = resultList.sortedBy { it.areaOfShape() }.toMutableList()
     return resultList
-
-
 }
