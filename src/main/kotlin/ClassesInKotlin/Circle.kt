@@ -1,5 +1,7 @@
 package ClassesInKotlin
 
+import java.lang.Exception
+
 class Circle constructor(val radius:Double) : Shape("Circle") {
 
     constructor(diameter : Int) : this((diameter/2).toDouble())
@@ -8,6 +10,10 @@ class Circle constructor(val radius:Double) : Shape("Circle") {
 
 //    private val PI: Double = 3.15 // only accessible to Circle class since it is private
     init {
+
+        if (radius < 0)
+            throw NegativeRadiusException()
+
         println("A circle is created with radius = $radius")
         println("Area of the circle is: ${areaOfShape()}")
         println("Perimeter of the circle is: ${perimeterOfShape()}")
@@ -22,10 +28,12 @@ class Circle constructor(val radius:Double) : Shape("Circle") {
     }
 
     override fun perimeterOfShape(): Double {
-        return ImportantConstants.PI * radius * radius
+        return 2 * ImportantConstants.PI * radius
     }
 
 }
+
+class NegativeRadiusException : Exception("Radius cannot be negative. Please enter a positive radius")
 
 /*
 

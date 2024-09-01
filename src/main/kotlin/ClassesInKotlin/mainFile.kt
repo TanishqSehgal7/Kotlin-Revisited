@@ -1,4 +1,5 @@
 import ClassesInKotlin.*
+import java.lang.Exception
 
 fun main() {
 
@@ -51,6 +52,28 @@ fun main() {
 
     println("Creating a Random Reactangle")
     val newRandomRectangle = Rectangle.generateRandomRectangle()
+
+    println("\n")
+
+    println("Enter radius of Circle: \n")
+
+
+    val newCircle = try {
+
+        val circleRadius = try {
+            readLine()?.toDouble()
+        } catch (e:TypeCastException) {
+            5.0
+        }
+
+        if (circleRadius != null)
+            Circle(circleRadius)
+        else
+            5.0
+
+    } catch (e:NegativeRadiusException) {
+        Circle(5.0)
+    }
 
 }
 

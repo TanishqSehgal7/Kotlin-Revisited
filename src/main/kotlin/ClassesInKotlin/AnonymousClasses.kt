@@ -60,15 +60,22 @@ fun main() {
             println("Parallelogram created with dimensions a=${a}, b=${b} and height=${ht}")
             println("Area of parallelogram is: ${this.areaOfShape()}")
             println("Area of parallelogram is: ${this.perimeterOfShape()}")
+
+            if(isRectangle())
+                println("This trapezium is a rectangle")
+            else
+                println("This trapezium is not a rectangle")
         }
 
         override fun areaOfShape(): Double {
-            return 0.5*(a+b)*ht
+            return 0.5 * (a+b) * ht
         }
 
         override fun perimeterOfShape(): Double {
             return a + b + c1 + d1
         }
+
+        fun isRectangle(): Boolean = a1 == c1 && b1 == d1
 
     }
 
